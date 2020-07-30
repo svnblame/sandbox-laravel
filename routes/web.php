@@ -18,5 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('about', function () {
+    $name = request('name');
+    
     return 'The About Page';
+});
+
+Route::get('info', function () {
+    return phpinfo();
 });

@@ -37,13 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function age()
+    protected function foobar($baz)
     {
-        return 55;
-    }
-
-    protected function test($string)
-    {
-        return $string;
+        return $baz * 5;
     }
 }
