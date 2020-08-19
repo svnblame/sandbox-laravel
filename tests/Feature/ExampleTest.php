@@ -21,6 +21,6 @@ class ExampleTest extends TestCase
 
     public function test_it_loads_the_about_page()
     {
-        $this->get('/about?name=foobar')->assertSee('About');
+        $this->get('/about')->assertSee('About');
     }
 }
