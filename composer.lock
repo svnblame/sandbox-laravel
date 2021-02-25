@@ -3678,7 +3678,7 @@
             ],
             "support": {
                 "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
-            },
+            }
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
