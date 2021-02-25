@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Foobar;
+use App\Foo;
 use Illuminate\Http\Request;
 
-class FoobarController extends Controller
+class FooController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class FoobarController extends Controller
      */
     public function index(Request $request)
     {
-        dd($request);
+        return $request->input('name');
     }
 
     /**
@@ -41,10 +41,10 @@ class FoobarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Foo  $foo
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Foo $foo)
     {
         //
     }
@@ -52,10 +52,10 @@ class FoobarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Foo  $foo
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Foo $foo)
     {
         //
     }
@@ -64,10 +64,10 @@ class FoobarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Foo  $foo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Foo $foo)
     {
         //
     }
@@ -75,10 +75,10 @@ class FoobarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Foo  $foo
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Foo $foo)
     {
         //
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FooController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,10 @@ Route::get('about', function () {
 Route::get('info', function () {
     return phpinfo();
 });
+
+Route::get('name', 'FooController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
